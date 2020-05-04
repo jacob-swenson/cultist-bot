@@ -3,11 +3,10 @@ from models import Deck, get_card_data_by_name, get_card_data_by_code
 
 
 class LegendsOfRuneterra(commands.Cog):
-    MAX_RELATED_IMAGES = 2
-
-    def __init__(self, bot):
+    def __init__(self, bot, max_images=2):
         self.bot = bot
         self._last_member = None
+        self.MAX_RELATED_IMAGES = max_images
 
     @commands.command(name='deck', help='Prints the decklist from an encoded deck')
     async def deck_code(self, ctx, code):
@@ -34,6 +33,7 @@ class LegendsOfRuneterra(commands.Cog):
         print(f'Looking up card {card}')
         data = get_card_data_by_name(card)
         if data is None:
+            print(f"Didn't find card {card}")
             await ctx.send(f"Card {card} not found!")
             return
         response = ""
