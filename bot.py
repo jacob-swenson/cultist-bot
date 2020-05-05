@@ -29,6 +29,12 @@ async def hello(ctx):
     await ctx.send(response)
 
 
+@bot.command(name='code', help='See my code')
+async def code(ctx):
+    response = "Don't look! I'm naked!\nhttps://www.github.com/jacob-swenson/cultist-bot"
+    await ctx.send(response)
+
+
 bot.add_cog(LegendsOfRuneterra(bot))
 bot.add_cog(CthulhuWars(bot))
 bot.run(TOKEN)
