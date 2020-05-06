@@ -1,5 +1,6 @@
 import os
 import discord
+import ghoul
 from dotenv import load_dotenv
 from discord.ext import commands
 from lor import LegendsOfRuneterra
@@ -33,6 +34,17 @@ async def hello(ctx):
 async def code(ctx):
     response = "Don't look! I'm naked!\nhttps://www.github.com/jacob-swenson/cultist-bot"
     await ctx.send(response)
+
+
+@bot.event
+async def on_message(message):
+    if message.author == bot.user:
+        return
+    if str(message.channel.type) == "private":
+        print(f"Handling private message: {message.content}")
+        response = ghoul.say(message.content)
+        print(f"Responding with: {response}")
+        await message.channel.send(response)
 
 
 bot.add_cog(LegendsOfRuneterra(bot))
