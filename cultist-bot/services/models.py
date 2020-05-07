@@ -55,7 +55,7 @@ def get_card_data_by_code(card):
     return None
 
 
-with open('data/lor/set1-en_us.json') as f:
+with open('../data/lor/set1-en_us.json') as f:
     set1 = json.load(f)
-with open('data/lor/set2-en_us.json') as f:
+with open('../data/lor/set2-en_us.json') as f:
     set2 = json.load(f)

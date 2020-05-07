@@ -1,0 +1,8 @@
+{
+    "code": ["Don't look! I'm naked!\nhttps://www.github.com/jacob-swenson/cultist-bot"],
+    "hello": ["Hello, I'm your friendly neighborhood cultist bot!"],
+    "unknown": ["I don't know what your talking about", "Pardon?", "I'm sorry?", "Cthulhu R'lyeh"],
+    "status_positive": ["That's great to hear"],
+    "status_neutral": ["Alright then, keep your secrets"],
+    "status_negative": ["I'm sorry about that", "Would a blood sacrifice make you feel better?"]
+}
