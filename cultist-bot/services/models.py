@@ -2,7 +2,7 @@ from lor_deckcodes import LoRDeck, CardCodeAndCount
 import json
 import os
 
-LOR_DATA_FOLDER = 'data/lor/'
+LOR_DATA_FOLDER = 'cultist-bot/data/lor/'
 
 
 class Deck:

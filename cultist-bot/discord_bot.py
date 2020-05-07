@@ -40,4 +40,5 @@ async def on_message(message):
 
 
 def run():
+    print("Starting Discord bot")
     client.run(TOKEN)
