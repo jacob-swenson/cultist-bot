@@ -1,6 +1,6 @@
 import os
 import discord
-import wit_dispatcher
+import ghoul_dispatcher
 import command_dispatcher
 from dotenv import load_dotenv
 
@@ -33,7 +33,7 @@ async def on_message(message):
         response = command_dispatcher.dispatch(command, args)
     elif str(message.channel.type) == "private":
         print(f"Handling private message: {message.content}")
-        response = wit_dispatcher.dispatch(message.content)
+        response = ghoul_dispatcher.dispatch(message.content)
         print(f"Responding with: {response}")
     if response is not None:
         await message.channel.send(response)
