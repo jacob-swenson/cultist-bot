@@ -1,4 +1,4 @@
-from services import ghoul, cthulhuwars, base_service
+from services import ghoul, cthulhuwars, lor, base_service
 import json
 
 
@@ -16,13 +16,23 @@ def draft(resp: json):
     return cthulhuwars.draft(players)
 
 
+def card(resp: json):
+    entities = ghoul.get_entities(resp)
+    if 'contact' not in entities:
+        print("Ghoul thinks the user wants to look up a card but didn't find a card name. Falling back to unknown")
+        return base_service.respond_to('unknown')
+    card_name = entities['contact'][0]['value']
+    print(f"Ghoul thinks the user wants to look up the card {card_name}")
+    return lor.card(card_name)
+
+
 def unknown(resp: json):
     print("Ghoul doesn't know what the user wants")
     return base_service.respond_to(ghoul.get_intent(resp))
 
 
 def introduction(resp: json):
-    user = ghoul.get_entities(resp)['contact'][0]["value"]
+    user = ghoul.get_entities(resp)['contact'][0]['value']
     return base_service.introduction(user)
 
 
@@ -51,6 +61,7 @@ def populate_base_commands():
 
 intents = {
     'draft': draft,
+    'card': card,
     'unknown': unknown,
     'introduction': introduction,
     'status': status
