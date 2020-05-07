@@ -1,4 +1,4 @@
-from services import cthulhuwars, base_service
+from services import cthulhuwars, base_service, lor
 
 
 def get_handler(command: str):
@@ -14,6 +14,20 @@ def dispatch(command: str, args):
 def draft(command, players):
     print('User wants to run a Cthulhu Wars draft')
     return cthulhuwars.draft(players)
+
+
+def card(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to look up the card {name}')
+    return lor.card(name)
+
+
+def deck(command, code):
+    if len(code) is not 1:
+        print(f"User didn't give a valid deckcode: {code}")
+        return "Your input doesn't look correct. Please use format: " \
+               "\n!deck CEBQCAQFAEAQCAJCBAAQKEA2DUUCWMJSGUBAEAQFAQFAEAIFDE4ACAQBAURS2"
+    return lor.deck_code(code[0])
 
 
 def base_command(command, args):
@@ -52,11 +66,18 @@ commands = {
         'help': 'Runs a draft for Cthulhu Wars',
         'handler': draft
     },
+    'card': {
+        'help': 'Looks up a card from Legends of Runeterra',
+        'handler': card
+    },
+    'deck': {
+        'help': 'Shows cards from a generated deck code',
+        'handler': deck
+    },
     'help': {
         'help': 'Displays this message',
         'handler': get_help
     }
 }
-
 
 populate_base_commands()
