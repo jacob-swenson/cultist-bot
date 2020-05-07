@@ -4,7 +4,7 @@ from wit import Wit
 from dotenv import load_dotenv
 from cthulhuwars import factions
 import drafter
-from random import random
+import random
 
 load_dotenv()
 TOKEN = os.getenv('WIT_TOKEN')
@@ -33,7 +33,7 @@ def draft(resp: json):
 
 def unknown(resp: json):
     print("Wit doesn't know what the user wants")
-    return random.selection(i_dont_know)
+    return random.choice(i_dont_know)
 
 
 intent_map = {
