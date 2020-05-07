@@ -18,5 +18,9 @@ setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
+        'wit',
+        'discord',
+        'python-dotenv',
+        'lor-deckcodes'
     ],
 )

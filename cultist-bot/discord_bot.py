@@ -32,11 +32,30 @@ async def on_message(message):
         print(f"Handling command: {command} with args: {args}")
         response = command_dispatcher.dispatch(command, args)
     elif str(message.channel.type) == "private":
-        print(f"Handling private message: {message.content}")
-        response = ghoul_dispatcher.dispatch(message.content)
-        print(f"Responding with: {response}")
+        content = remove_mentions(message.content)
+        print(f"Handling private message: {content}")
+        response = ghoul_dispatcher.dispatch(content)
+    else:
+        for mention in message.mentions:
+            if mention.id == client.user.id:
+                content = remove_mentions(message)
+                print(f"Handling mention: {content}")
+                response = ghoul_dispatcher.dispatch(content)
     if response is not None:
+        print(f"Responding with: {response}")
         await message.channel.send(response)
+
+
+def remove_mentions(message):
+    content = message.content
+    print(f"Content before replacing: {content}")
+    for mention in message.mentions:
+        if mention.id == client.user.id:
+            content = content.replace(f'<@!{mention.id}>', '')
+        else:
+            content = content.replace(f'<@!{mention.id}>', mention.name)
+    print(f"Content after replacing: {content}")
+    return content
 
 
 def run():
