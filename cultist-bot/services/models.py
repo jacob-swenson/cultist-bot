@@ -1,8 +1,10 @@
 from lor_deckcodes import LoRDeck, CardCodeAndCount
+from fuzzywuzzy import process
 import json
 import os
 
 LOR_DATA_FOLDER = 'cultist-bot/data/lor/'
+card_names = []
 
 
 class Deck:
@@ -39,6 +41,15 @@ def get_card_data_by_name(card):
         if card_data["name"].lower() == card.lower():
             return card_data
     return None
+
+
+def get_card_data_by_fuzzy_search(card):
+    if len(card_names) is 0:
+        for card_data in set_data:
+            card_names.append(card_data["name"])
+    best_guess = process.extractOne(card, card_names)
+    print(f"Fuzzy Wuzzy is {best_guess[1]}% sure the user is looking for {best_guess[0]}")
+    return get_card_data_by_name(best_guess[0])
 
 
 def get_card_data_by_code(card):

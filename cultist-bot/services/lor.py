@@ -26,7 +26,7 @@ def deck_code(code):
 
 def card(name):
     print(f'Looking up card_name {name}')
-    data = models.get_card_data_by_name(name)
+    data = models.get_card_data_by_fuzzy_search(name)
     if data is None:
         print(f"Didn't find card_name {name}")
         return f"card {name} not found!"
