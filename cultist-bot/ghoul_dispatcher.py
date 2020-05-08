@@ -1,4 +1,5 @@
 from services import ghoul, cthulhuwars, lor, base_service
+import command_dispatcher
 import json
 
 
@@ -64,7 +65,8 @@ intents = {
     'card': card,
     'unknown': unknown,
     'introduction': introduction,
-    'status': status
+    'status': status,
+    'help': command_dispatcher.get_help
 }
 
 populate_base_commands()

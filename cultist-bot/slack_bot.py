@@ -30,7 +30,7 @@ async def say_hello(**payload):
     message = remove_mentions(data['text'])
     response = None
     channel_id = data['channel']
-    await payload['rtm_client'].typing(channel=channel_id)
+    await rtm_client.typing(channel=channel_id)
     if message[0] is '/':
         words = message.split()
         command = words[0][1:]

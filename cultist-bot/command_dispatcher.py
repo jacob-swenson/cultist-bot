@@ -40,14 +40,15 @@ def unknown(command, args):
     return base_service.respond_to('unknown')
 
 
-def get_help(command, args):
+def get_help(*kwargs):
     print('Showing help test')
     resp = 'I am a bot built by m3ddl3r as a side project in his free time.\n'
     resp += 'Commands cultist knows:\n```\n'
     for cmd in commands:
         resp += f"{cmd}:\t{commands[cmd]['help']}\n"
-    resp += '```\n I am also slowly learning how to understand natural language. DM me and tell me to do some of these ' \
-            'commands in plain English and see what I can do!'
+    resp += '```\n I am also slowly learning how to understand natural language. DM me and tell me to do some of ' \
+            'these commands in plain English and see what I can do!\n\nMany of the "plain-text" commands are meant ' \
+            'for the text recognition side of the bot so try and trigger them using an english sentence'
     return resp
 
 
@@ -56,7 +57,7 @@ def populate_base_commands():
         if command == 'unknown':
             continue
         commands[command] = {
-            'help': 'Run me to see what I do',
+            'help': 'Basic text-response command',
             'handler': base_command
         }
 
