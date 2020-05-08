@@ -9,13 +9,10 @@ def respond_to(intent: str):
 
 def introduction(user: str):
     print("Handling an introduction")
-    pre = random.choice(introductions['pre'])
-    post = random.choice(introductions['post'])
+    pre = random.choice(messages['intro_pre'])
+    post = random.choice(messages['intro_post'])
     return f"{pre}{user}{post}"
 
 
 with open('cultist-bot/data/messages/messages-en_us.json') as f:
     messages = json.load(f)
-
-with open('cultist-bot/data/messages/introductions-en_us.json') as f:
-    introductions = json.load(f)

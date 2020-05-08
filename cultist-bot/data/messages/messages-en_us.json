@@ -21,5 +21,17 @@
     "status_negative": [
         "I'm sorry about that",
         "Would a blood sacrifice make you feel better?"
+    ],
+    "intro_pre": [
+        "Hey there, ",
+        "Well hello, ",
+        "Nice to meet you ",
+        "Wassup "
+    ],
+    "intro_post": [
+        ". How are you today?",
+        ". Hope you're doing well",
+        ". Mighty fine day for a summoning",
+        ". Stay a while and listen"
     ]
 }
