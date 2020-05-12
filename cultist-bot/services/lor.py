@@ -1,13 +1,11 @@
-from discord.ext import commands
-from services import models
-
+from services.models import lor_models
 
 MAX_RELATED_IMAGES = 2
 
 
 def deck_code(code):
     print("Decoding deck: " + code)
-    deck = models.Deck(code)
+    deck = lor_models.Deck(code)
     response = "```\n"
     first = True
     for champion in deck.champions:
@@ -26,7 +24,7 @@ def deck_code(code):
 
 def card(name):
     print(f'Looking up card_name {name}')
-    data = models.get_card_data_by_fuzzy_search(name)
+    data = lor_models.get_card_data_by_fuzzy_search(name)
     if data is None:
         print(f"Didn't find card_name {name}")
         return f"card {name} not found!"
@@ -37,7 +35,7 @@ def card(name):
     for associated_card in data["associatedCardRefs"]:
         if count == MAX_RELATED_IMAGES:
             break
-        associated_data = models.get_card_data_by_code(associated_card)
+        associated_data = lor_models.get_card_data_by_code(associated_card)
         for image in associated_data["assets"]:
             response += image["gameAbsolutePath"] + "\n"
         count += 1

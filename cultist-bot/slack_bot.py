@@ -31,7 +31,7 @@ async def say_hello(**payload):
     response = None
     channel_id = data['channel']
     await rtm_client.typing(channel=channel_id)
-    if message[0] is '!':
+    if message[0] == '!':
         words = message.split()
         command = words[0][1:]
         args = words[1:]

@@ -44,7 +44,7 @@ def get_card_data_by_name(card):
 
 
 def get_card_data_by_fuzzy_search(card):
-    if len(card_names) is 0:
+    if len(card_names) == 0:
         for card_data in set_data:
             card_names.append(card_data["name"])
     best_guess = process.extractOne(card, card_names)

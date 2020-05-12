@@ -23,7 +23,7 @@ def card(command, name_arr):
 
 
 def deck(command, code):
-    if len(code) is not 1:
+    if len(code) != 1:
         print(f"User didn't give a valid deckcode: {code}")
         return "Your input doesn't look correct. Please use format: " \
                "\n!deck CEBQCAQFAEAQCAJCBAAQKEA2DUUCWMJSGUBAEAQFAQFAEAIFDE4ACAQBAURS2"
