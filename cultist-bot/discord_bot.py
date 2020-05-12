@@ -32,7 +32,7 @@ async def on_message(message):
         print(f"Handling command: {command} with args: {args}")
         response = command_dispatcher.dispatch(command, args)
     elif str(message.channel.type) == "private":
-        content = remove_mentions(message.content)
+        content = remove_mentions(message)
         print(f"Handling private message: {content}")
         response = ghoul_dispatcher.dispatch(content)
     else:
