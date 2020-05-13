@@ -39,7 +39,7 @@ async def say_hello(**payload):
         response = command_dispatcher.dispatch(command, args)
     else:
         print(f"Handling plain text: {message}")
-        response = ghoul_dispatcher.dispatch(message, "dummy")
+        response = ghoul_dispatcher.dispatch(message, data['user'])
     if response is not None:
         print(f"Responding with: {response}")
         web_client.chat_postMessage(
