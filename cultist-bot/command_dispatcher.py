@@ -45,7 +45,8 @@ def get_help(*kwargs):
     resp = 'I am a bot built by m3ddl3r as a side project in his free time.\n'
     resp += 'Commands cultist knows:\n```\n'
     for cmd in commands:
-        resp += f"{cmd}:\t{commands[cmd]['help']}\n"
+        if cmd[0] != '_':
+            resp += f"{cmd}:\t{commands[cmd]['help']}\n"
     resp += '```\n I am also slowly learning how to understand natural language. DM me and tell me to do some of ' \
             'these commands in plain English and see what I can do!\n\nMany of the "plain-text" commands are meant ' \
             'for the text recognition side of the bot so try and trigger them using an english sentence'

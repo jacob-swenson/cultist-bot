@@ -9,8 +9,8 @@ def respond_to(intent: str):
 
 def introduction(user: str):
     print("Handling an introduction")
-    pre = random.choice(messages['intro_pre'])
-    post = random.choice(messages['intro_post'])
+    pre = random.choice(messages['_intro_pre'])
+    post = random.choice(messages['_intro_post'])
     return f"{pre}{user}{post}"
 
 

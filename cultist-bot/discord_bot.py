@@ -34,13 +34,14 @@ async def on_message(message):
     elif str(message.channel.type) == "private":
         content = remove_mentions(message)
         print(f"Handling private message: {content}")
-        response = ghoul_dispatcher.dispatch(content)
+        response = ghoul_dispatcher.dispatch(content, message.author)
     else:
         for mention in message.mentions:
             if mention.id == client.user.id:
                 content = remove_mentions(message)
                 print(f"Handling mention: {content}")
-                response = ghoul_dispatcher.dispatch(content)
+                response = ghoul_dispatcher.dispatch(content, message.author)
+                break
     if response is not None:
         print(f"Responding with: {response}")
         await message.channel.send(response)

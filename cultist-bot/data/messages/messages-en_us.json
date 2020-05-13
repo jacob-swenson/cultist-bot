@@ -12,27 +12,48 @@
         "Cthulhu R'lyeh",
         "New bot, who dis?"
     ],
-    "status_positive": [
+    "_status_positive": [
         "That's great to hear!",
         "I'm happy for you!",
         "I'm doing well too.... at least as well as a robot can be"],
-    "status_neutral": [
+    "_status_neutral": [
         "Alright then, keep your secrets"
     ],
-    "status_negative": [
+    "_status_negative": [
         "I'm sorry about that",
         "Would a blood sacrifice make you feel better?"
     ],
-    "intro_pre": [
+    "_intro_pre": [
         "Hey there, ",
         "Well hello, ",
         "Nice to meet you ",
         "Wassup "
     ],
-    "intro_post": [
+    "_intro_post": [
         ". How are you today?",
         ". Hope you're doing well",
         ". Mighty fine day for a summoning",
         ". Stay a while and listen"
+    ],
+    "_request_gender": [
+        "Great! Let's get you a name! First, though, are you male or female?"
+    ],
+    "_request_gender_failed": [
+        "Oops, I didn't get that. You need to tell me if your character is a male of a female."
+    ],
+    "_request_setting":[
+        "Got it! And what setting would you like your character to be from? Here are your options:"
+    ],
+    "_request_setting_failed": [
+        "Oops, I didn't get that. Please use one of these settings:"
+    ],
+    "_get_name_success": [
+        "I dub thee: "
+    ],
+    "_draft_failed": [
+        "Who's playing?"
+    ],
+    "_cancel": [
+        "Sounds good, request cancelled."
     ]
 }
