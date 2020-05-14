@@ -52,7 +52,7 @@ def persist_users():
         out_data[user.uid] = {}
         out_data[user.uid]['data'] = user.data
         out_data[user.uid]['node'] = user.node
-    with open('cultist-bot/data/users/user-data.json', 'w') as out_file:
+    with open('data/users/user-data.json', 'w') as out_file:
         json.dump(out_data, out_file)
 
 
