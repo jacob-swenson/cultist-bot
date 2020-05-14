@@ -36,19 +36,38 @@
         ". Stay a while and listen"
     ],
     "_request_gender": [
-        "Great! Let's get you a name! First, though, are you male or female?"
+        "Greetings adventurer! Art thou a boy or a girl?"
     ],
     "_request_gender_failed": [
-        "Oops, I didn't get that. You need to tell me if your character is a male of a female."
+        "I'm not picking up what you're putting down. Are you a boy or a girl?",
+        "I'm not sure what you mean.  Are you a boy or a girl?"
     ],
-    "_request_setting":[
-        "Got it! And what setting would you like your character to be from? Here are your options:"
+    "_male_pronoun": [
+        "Sir",
+        "Gentleman"
+    ],
+    "_female_pronoun": [
+        "Madam",
+        "Lady"
+    ],
+    "_request_setting_pre": [
+        "G'day ",
+        "Howdy ",
+        "Pleased to meet you ",
+        "Your adventure begins here "
+    ],
+    "_request_setting_post": [
+        " which setting are you adventuring in today?",
+        " where will this adventure take you?",
+        " to which setting are you travelling?"
     ],
     "_request_setting_failed": [
         "Oops, I didn't get that. Please use one of these settings:"
     ],
     "_get_name_success": [
-        "I dub thee: "
+        "I dub thee ",
+        "And the name you shall receive is ",
+        "I shall call you "
     ],
     "_draft_failed": [
         "Who's playing?"

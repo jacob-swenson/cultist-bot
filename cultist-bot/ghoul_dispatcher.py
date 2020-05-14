@@ -26,6 +26,7 @@ def draft(resp: json, uid: str):
         return base_service.respond_to('_draft_failed')
     for player in ghoul.get_entities(resp)["contact"]:
         players.append(player["value"])
+    user.set_node(None)
     return cthulhuwars.draft(players)
 
 
