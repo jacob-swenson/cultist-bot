@@ -3,7 +3,7 @@ from fuzzywuzzy import process
 import json
 import os
 
-LOR_DATA_FOLDER = 'cultist-bot/data/lor/'
+LOR_DATA_FOLDER = 'data/lor/'
 card_names = []
 
 

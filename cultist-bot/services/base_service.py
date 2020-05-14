@@ -14,5 +14,5 @@ def introduction(user: str):
     return f"{pre}{user}{post}"
 
 
-with open('cultist-bot/data/messages/messages-en_us.json') as f:
+with open('data/messages/messages-en_us.json') as f:
     messages = json.load(f)

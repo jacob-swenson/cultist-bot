@@ -57,7 +57,7 @@ def persist_users():
 
 
 def load_users():
-    with open('cultist-bot/data/users/user-data.json', 'r') as in_file:
+    with open('data/users/user-data.json', 'r') as in_file:
         in_data = json.load(in_file)
         for user in in_data:
             print(user)

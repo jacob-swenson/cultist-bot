@@ -50,5 +50,5 @@ def get_setting(text: str, uid: str):
     return response
 
 
-with open('cultist-bot/data/rpg/names.json') as name_file:
+with open('data/rpg/names.json') as name_file:
     name_data = json.load(name_file)
