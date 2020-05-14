@@ -760,5 +760,13 @@
       "Zyneste",
       "Zynoa"
     ]
+  },
+  "sci-fi": {
+    "male": [
+      "Hank"
+    ],
+    "female": [
+      "Georgina"
+    ]
   }
 }
