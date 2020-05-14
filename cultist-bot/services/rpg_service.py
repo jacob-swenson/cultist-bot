@@ -4,15 +4,14 @@ import random
 import re
 
 
-def name_generator(resp: json, uid: str):
+def name_generator(uid: str):
     user = user_service.get_user(uid)
     user.set_node('get_gender')
     return random.choice(base_service.messages['_request_gender'])
 
 
-def get_gender(resp: json, uid: str):
+def get_gender(text: str, uid: str):
     user = user_service.get_user(uid)
-    text = resp['_text'].lower()
     gender = None
     pronoun = None
     if re.search(text, r'\b(male)|(boy)\b'):
@@ -33,9 +32,8 @@ def get_gender(resp: json, uid: str):
     return response
 
 
-def get_setting(resp: json, uid: str):
+def get_setting(text: str, uid: str):
     user = user_service.get_user(uid)
-    text = resp['_text'].lower()
     gender = user.get_data('gender')
     setting = None
     for setting_from_data in name_data:

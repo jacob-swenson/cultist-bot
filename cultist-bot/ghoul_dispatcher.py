@@ -75,6 +75,23 @@ def populate_base_commands():
         intents[command] = base_command
 
 
+def name_generator(resp: json, uid: str):
+    print("Generating RPG name")
+    return rpg_service.name_generator(uid)
+
+
+def get_gender(resp: json, uid: str):
+    print("Jumping to node get_gender")
+    text = resp["_text"]
+    return rpg_service.get_gender(text, uid)
+
+
+def get_setting(resp: json, uid: str):
+    print("Jumping to node get_setting")
+    text = resp["_text"]
+    return rpg_service.get_setting(text, uid)
+
+
 intents = {
     'draft': draft,
     'card': card,
@@ -82,12 +99,12 @@ intents = {
     'introduction': introduction,
     'status': status,
     'help': command_dispatcher.get_help,
-    'generate_name': rpg_service.name_generator
+    'generate_name': name_generator
 }
 
 nodes = {
-    'get_gender': rpg_service.get_gender,
-    'get_setting': rpg_service.get_setting,
+    'get_gender': get_gender,
+    'get_setting': get_setting,
     'draft': draft
 }
 
