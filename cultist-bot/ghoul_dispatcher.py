@@ -30,6 +30,16 @@ def draft(resp: json, uid: str):
     return cthulhuwars.draft(players)
 
 
+def summon(resp: json, uid: str):
+    entities = ghoul.get_entities(resp)
+    if 'contact' not in entities:
+        print("Ghoul thinks the user wants to look up a faction but didn't find a name. Falling back to unknown")
+        return base_service.respond_to('unknown')
+    faction_name = entities['contact'][0]['value']
+    print(f"Ghoul thinks the user wants to look up the card {faction_name}")
+    return cthulhuwars.summon_faction(faction_name)
+
+
 def card(resp: json, uid: str):
     entities = ghoul.get_entities(resp)
     if 'contact' not in entities:
@@ -94,6 +104,7 @@ def get_setting(resp: json, uid: str):
 
 intents = {
     'draft': draft,
+    'summon': summon,
     'card': card,
     'unknown': unknown,
     'introduction': introduction,

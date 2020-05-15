@@ -16,6 +16,12 @@ def draft(command, players):
     return cthulhuwars.draft(players)
 
 
+def summon(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to summon {name}')
+    return cthulhuwars.summon_faction(name)
+
+
 def card(command, name_arr):
     name = ' '.join(name_arr)
     print(f'User wants to look up the card {name}')
@@ -67,6 +73,10 @@ commands = {
     'draft': {
         'help': 'Runs a draft for Cthulhu Wars',
         'handler': draft
+    },
+    'summon': {
+        'help': 'Summon a Great Old One (see their faction information',
+        'handler': summon
     },
     'card': {
         'help': 'Looks up a card from Legends of Runeterra',

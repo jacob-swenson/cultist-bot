@@ -1,0 +1,65 @@
+{
+  "ancients": {
+    "name": "The Ancients",
+    "sheet-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/Ancients-sheet.png",
+    "spells-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/Ancients-spells.png",
+    "wiki": "https://cthulhuwars.fandom.com/wiki/The_Ancients",
+    "youtube": "https://www.youtube.com/watch?v=1pWfcTxUe2Y"
+  },
+  "black_goat": {
+    "name": "Black Goat",
+    "sheet-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/BlackGoat-sheet.png",
+    "spells-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/BlackGoat-spells.png",
+    "wiki": "https://cthulhuwars.fandom.com/wiki/Black_Goat",
+    "youtube": "https://www.youtube.com/watch?v=P13viFT3Vz4"
+  },
+  "crawling_chaos": {
+    "name": "Crawling Chaos",
+    "sheet-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/CrawlingChaos-sheet.png",
+    "spells-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/CrawlingChaos-spells.png",
+    "wiki": "https://cthulhuwars.fandom.com/wiki/Crawling_Chaos",
+    "youtube": "https://www.youtube.com/watch?v=RDTwUvbJ0kQ"
+  },
+  "great_cthulhu": {
+    "name": "Great Cthulhu",
+    "sheet-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/GreatCthulhu-sheet.png",
+    "spells-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/GreatCthulhu-spells.png",
+    "wiki": "https://cthulhuwars.fandom.com/wiki/Great_Cthulhu",
+    "youtube": "https://www.youtube.com/watch?v=zZVTMag6dVM"
+  },
+  "opener_way": {
+    "name": "Opener of the Way",
+    "sheet-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/OpenerOfTheWay-sheet.png",
+    "spells-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/OpenerOfTheWay-spells.png",
+    "wiki": "https://cthulhuwars.fandom.com/wiki/Opener_of_the_Way",
+    "youtube": "https://www.youtube.com/watch?v=YUnZCxz_Ryc"
+  },
+  "sleeper": {
+    "name": "Sleeper",
+    "sheet-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/Sleepers-sheet.png",
+    "spells-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/Sleepers-spells.png",
+    "wiki": "https://cthulhuwars.fandom.com/wiki/Sleeper",
+    "youtube": "https://www.youtube.com/watch?v=159TqqR01ak"
+  },
+  "tcho_tcho": {
+    "name": "Tcho-Tcho",
+    "sheet-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/TchoTcho-sheet.png",
+    "spells-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/TchoTcho-spells.png",
+    "wiki": "https://cthulhuwars.fandom.com/wiki/Tcho-Tcho",
+    "youtube": "https://www.youtube.com/watch?v=K93M_26KLyA"
+  },
+  "windwalker": {
+    "name": "WindWalker",
+    "sheet-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/Windwalkers-sheet.png",
+    "spells-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/Windwalkers-spells.png",
+    "wiki": "https://cthulhuwars.fandom.com/wiki/Windwalker",
+    "youtube": "https://www.youtube.com/watch?v=8ukPhTW4tik"
+  },
+  "yellow_sign": {
+    "name": "Yellow Sign",
+    "sheet-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/YellowSign-sheet.png",
+    "spells-image": "https://raw.githubusercontent.com/jacob-swenson/cultist-bot/master/cultist-bot/data/cthulhu-wars/YellowSign-spells.png",
+    "wiki": "https://cthulhuwars.fandom.com/wiki/Yellow_Sign",
+    "youtube": "https://www.youtube.com/watch?v=7p2d18eow-8"
+  }
+}
