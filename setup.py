@@ -19,9 +19,9 @@ setup(
     ],
     install_requires=[
         'wit',
-        'discord',
+        'discord>=1.3.4',
         'python-dotenv',
-        'lor-deckcodes',
+        'lor-deckcodes=1.1.1',
         'slackclient>=2.0.0',
         'slackeventsapi>=2.1.0',
         'Flask>=1.1.1',
