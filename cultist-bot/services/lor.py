@@ -1,6 +1,6 @@
 from services.models import lor_models
 
-MAX_RELATED_IMAGES = 2
+MAX_RELATED_IMAGES = 3
 
 
 def deck_code(code):

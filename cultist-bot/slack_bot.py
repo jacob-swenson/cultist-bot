@@ -3,9 +3,7 @@ import re
 import ghoul_dispatcher
 import command_dispatcher
 from dotenv import load_dotenv
-from slack import RTMClient, rtm
-import slack
-
+from slack import RTMClient
 
 load_dotenv()
 TOKEN = os.getenv('SLACK_TOKEN')

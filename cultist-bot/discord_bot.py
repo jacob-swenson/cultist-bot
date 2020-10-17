@@ -25,7 +25,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     response = None
-    if message.content[0] == '!':
+    if len(message.content) > 0 and message.content[0] == '!':
         words = message.content.split()
         command = words[0][1:]
         args = words[1:]
