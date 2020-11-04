@@ -1,10 +1,18 @@
 from lor_deckcodes import LoRDeck, CardCodeAndCount
 from fuzzywuzzy import process
+from urllib import request
 import json
 import os
+import zipfile
 
 LOR_DATA_FOLDER = 'data/lor/'
+LOR_BASE_URL = 'https://dd.b.pvp.net'
+LOR_LOCALIZATION = 'en_us'
+LOR_VERSION = '1_13_0'
+LOR_SETS = 3
+
 card_names = []
+set_data = []
 
 
 class Deck:
@@ -59,10 +67,34 @@ def get_card_data_by_code(card):
     return None
 
 
-set_data = []
-for filename in os.listdir(LOR_DATA_FOLDER):
+def download_sets(version, sets):
+    for num in range(1, sets + 1):
+        set_number = 'set' + str(num) + '-lite-' + LOR_LOCALIZATION
+        url = LOR_BASE_URL + '/' + version + '/' + set_number + '.zip'
+        print('Downloading: ' + url)
+        zip_filename = LOR_DATA_FOLDER + set_number + '.zip'
+        request.urlretrieve(url, zip_filename)
+        print('Unzipping: ' + zip_filename)
+        with zipfile.ZipFile(zip_filename, 'r') as zip_ref:
+            zip_ref.extractall(LOR_DATA_FOLDER)
+    with open(LOR_DATA_FOLDER + 'current.txt', 'w') as f:
+        f.write(LOR_VERSION)
+
+
+try:
+    with open(LOR_DATA_FOLDER + 'current.txt') as f:
+        current_version = f.read()
+except IOError:
+    current_version = '0_0_0'
+
+if current_version != LOR_VERSION:
+    print("Downloading new set data")
+    download_sets(LOR_VERSION, LOR_SETS)
+
+localized_data = LOR_DATA_FOLDER + LOR_LOCALIZATION + '/data/'
+for filename in os.listdir(localized_data):
     if filename.endswith(".json"):
-        with open(LOR_DATA_FOLDER + filename) as f:
+        with open(localized_data + filename) as f:
             cur_set = json.load(f)
             for val in cur_set:
                 set_data.append(val)
