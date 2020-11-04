@@ -19,7 +19,7 @@ setup(
     ],
     install_requires=[
         'wit',
-        'discord>=1.3.4',
+        'discord',
         'python-dotenv',
         'lor-deckcodes>=1.1.1',
         'slackclient>=2.0.0',
