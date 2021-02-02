@@ -1,6 +1,5 @@
 import os
 import re
-import ghoul_dispatcher
 import command_dispatcher
 from dotenv import load_dotenv
 from slack import RTMClient
@@ -35,9 +34,9 @@ async def say_hello(**payload):
         args = words[1:]
         print(f"Handling command: {command} with args: {args}")
         response = command_dispatcher.dispatch(command, args)
-    else:
-        print(f"Handling plain text: {message}")
-        response = ghoul_dispatcher.dispatch(message, data['user'])
+    # else:
+    #     print(f"Handling plain text: {message}")
+    #     response = ghoul_dispatcher.dispatch(message, data['user'])
     if response is not None:
         print(f"Responding with: {response}")
         web_client.chat_postMessage(
