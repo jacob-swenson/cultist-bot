@@ -6,7 +6,8 @@ MAX_RELATED_IMAGES = 3
 def deck_code(code):
     print("Decoding deck: " + code)
     deck = lor_models.Deck(code)
-    response = "```\n"
+    response = code + "\n\n\n"
+    response += "```\n"
     first = True
     for champion in deck.champions:
         if not first:

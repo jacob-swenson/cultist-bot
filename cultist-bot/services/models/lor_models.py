@@ -4,12 +4,14 @@ from urllib import request
 import json
 import os
 import zipfile
+import time
 
 LOR_DATA_FOLDER = 'data/lor/'
 LOR_BASE_URL = 'https://dd.b.pvp.net'
 LOR_LOCALIZATION = 'en_us'
-LOR_VERSION = '1_13_0'
+LOR_VERSION = '2_0_0'
 LOR_SETS = 3
+REPEAT = 1000
 
 card_names = []
 set_data = []
@@ -68,33 +70,56 @@ def get_card_data_by_code(card):
 
 
 def download_sets(version, sets):
+    path = LOR_DATA_FOLDER + version + '/'
+    if not os.path.exists(path):
+        os.mkdir(path)
+    elif not os.path.isdir(path):
+        os.remove(path)
+        os.mkdir(path)
     for num in range(1, sets + 1):
         set_number = 'set' + str(num) + '-lite-' + LOR_LOCALIZATION
         url = LOR_BASE_URL + '/' + version + '/' + set_number + '.zip'
         print('Downloading: ' + url)
-        zip_filename = LOR_DATA_FOLDER + set_number + '.zip'
-        request.urlretrieve(url, zip_filename)
+        zip_filename = path + set_number + '.zip'
+        repeat = True
+        while repeat:
+            try:
+                request.urlretrieve(url, zip_filename)
+                repeat = False
+            except Exception as e:
+                print("Download failed!")
+                if REPEAT > 0:
+                    print("Retrying in " + str(REPEAT) + " seconds.")
+                    time.sleep(REPEAT)
+                    repeat = True
+                else:
+                    print("Not Retrying")
+                    exit(1)
         print('Unzipping: ' + zip_filename)
         with zipfile.ZipFile(zip_filename, 'r') as zip_ref:
-            zip_ref.extractall(LOR_DATA_FOLDER)
-    with open(LOR_DATA_FOLDER + 'current.txt', 'w') as f:
-        f.write(LOR_VERSION)
+            zip_ref.extractall(path)
 
 
-try:
-    with open(LOR_DATA_FOLDER + 'current.txt') as f:
-        current_version = f.read()
-except IOError:
-    current_version = '0_0_0'
+def sets_downloaded(version, sets):
+    if not os.path.exists(LOR_DATA_FOLDER + LOR_VERSION):
+        return False
+    if not os.path.isdir(LOR_DATA_FOLDER + LOR_VERSION):
+        return False
+    for num in range(1, sets + 1):
+        if not os.path.isfile(LOR_DATA_FOLDER + version + '/' + LOR_LOCALIZATION + '/data/set' + str(num) + '-' +
+                              LOR_LOCALIZATION + '.json'):
+            return False
+    return True
 
-if current_version != LOR_VERSION:
+
+if not sets_downloaded(LOR_VERSION, LOR_SETS):
     print("Downloading new set data")
     download_sets(LOR_VERSION, LOR_SETS)
 
-localized_data = LOR_DATA_FOLDER + LOR_LOCALIZATION + '/data/'
-for filename in os.listdir(localized_data):
-    if filename.endswith(".json"):
-        with open(localized_data + filename) as f:
-            cur_set = json.load(f)
-            for val in cur_set:
-                set_data.append(val)
+localized_data = LOR_DATA_FOLDER + LOR_VERSION + '/' + LOR_LOCALIZATION + '/data/'
+for num in range(1, LOR_SETS + 1):
+    set_filename = 'set' + str(num) + '-' + LOR_LOCALIZATION + '.json'
+    with open(localized_data + set_filename) as f:
+        cur_set = json.load(f)
+        for val in cur_set:
+            set_data.append(val)
