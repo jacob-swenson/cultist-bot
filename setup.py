@@ -21,7 +21,7 @@ setup(
         'wit',
         'discord',
         'python-dotenv',
-        'lor-deckcodes>=1.1.1',
+        'lor-deckcodes>=3.0.0',
         'slackclient>=2.0.0',
         'slackeventsapi>=2.1.0',
         'Flask>=1.1.1',

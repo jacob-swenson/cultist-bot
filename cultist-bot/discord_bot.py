@@ -24,6 +24,8 @@ async def on_message(message):
     if message.author == client.user:
         return
     response = None
+    if "TROLL" in message.content.upper():
+        response = "http://dd.b.pvp.net/2_5_0/set3/en_us/img/cards/03FR002.png"
     if len(message.content) > 0 and message.content[0] == '!':
         words = message.content.split()
         command = words[0][1:]
