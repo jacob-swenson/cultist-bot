@@ -43,3 +43,11 @@ def card(name):
     return response
 
 
+def emote(name):
+    print(f'Lookung up emote {name}')
+    data = lor_models.get_emote_by_fuzzy_search(name)
+    if data is None:
+        print(f"Didn't find emote {name}")
+        return lor_models.get_emote_names()
+    return data["url"]
+

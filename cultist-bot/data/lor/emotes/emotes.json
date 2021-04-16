@@ -1,0 +1,90 @@
+[
+  {
+    "name": "braum",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/braum_greeting_tx.gif?raw=true"
+  },
+  {
+    "name": "darius",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/darius_mistake_tx.gif?raw=true"
+  },
+  {
+    "name": "draven",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/draven_hellyea_TX.gif?raw=true"
+  },
+  {
+    "name": "elise",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/elise_laughing_TX.gif?raw=true"
+  },
+  {
+    "name": "ezreal",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/ezreal_sweating_TX.gif?raw=true"
+  },
+  {
+    "name": "fiora",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/fiora_bring_it_tx.gif?raw=true"
+  },
+  {
+    "name": "gangplank",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/gangplank_boared_tx.gif?raw=true"
+  },
+  {
+    "name": "heimerdinger",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/heimerdinger_math_tx.gif?raw=true"
+  },
+  {
+    "name": "jinx",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/jinx_surprise_tx.gif?raw=true"
+  },
+  {
+    "name": "lux",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/lux_praise_tx.gif?raw=true"
+  },
+  {
+    "name": "missfortuns",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/missfortune_confident_tx.gif?raw=true"
+  },
+  {
+    "name": "poro_pride",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/poro_pride_TX.gif?raw=true"
+  },
+  {
+    "name": "poro_sad",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/poro_sad_tx.gif?raw=true"
+  },
+  {
+    "name": "poro_yawn",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/poro_yawn_tx.gif?raw=true"
+  },
+  {
+    "name": "quinn",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/quinn_skeptical_tx.gif?raw=true"
+  },
+  {
+    "name": "shen",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/shen_respect_tx.gif?raw=true"
+  },
+  {
+    "name": "swain",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/swain_mindblown_tx.gif?raw=true"
+  },
+  {
+    "name": "teemo",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/teemo_topdeck_TX.gif?raw=true"
+  },
+  {
+    "name": "tresh",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/thresh_taunt_tx.gif?raw=true"
+  },
+  {
+    "name": "tryndamere",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/tryndamere_rage_tx.gif?raw=true"
+  },
+  {
+    "name": "vlad",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/vlad_cheers_tx.gif?raw=true"
+  },
+  {
+    "name": "yasuo",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/yasuo_reversal_tx.gif?raw=true"
+  }
+]

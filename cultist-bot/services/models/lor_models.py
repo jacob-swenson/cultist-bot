@@ -15,6 +15,8 @@ REPEAT = 30
 
 card_names = []
 set_data = []
+emote_data = []
+emote_names = []
 
 
 class Deck:
@@ -53,6 +55,13 @@ def get_card_data_by_name(card):
     return None
 
 
+def get_emote_by_name(emote):
+    for element in emote_data:
+        if element["name"].lower() == emote.lower():
+            return element
+    return None
+
+
 def get_card_data_by_fuzzy_search(card):
     if len(card_names) == 0:
         for card_data in set_data:
@@ -60,6 +69,27 @@ def get_card_data_by_fuzzy_search(card):
     best_guess = process.extractOne(card, card_names)
     print(f"Fuzzy Wuzzy is {best_guess[1]}% sure the user is looking for {best_guess[0]}")
     return get_card_data_by_name(best_guess[0])
+
+
+def get_emote_by_fuzzy_search(emote):
+    if len(emote_names) == 0:
+        for element in emote_data:
+            emote_names.append(element["name"])
+    if len(emote) == 0:
+        return None
+    best_guess = process.extractOne(emote, emote_names)
+    print(f"Fuzzy Wuzzy is {best_guess[1]}% sure the user is looking for {best_guess[0]}")
+    return get_emote_by_name(best_guess[0])
+
+
+def get_emote_names():
+    if len(emote_names) == 0:
+        for element in emote_data:
+            emote_names.append(element["name"])
+    result = 'Emotes I know:\n'
+    for name in emote_names:
+        result += f'{name}\n'
+    return result
 
 
 def get_card_data_by_code(card):
@@ -123,3 +153,6 @@ for num in range(1, LOR_SETS + 1):
         cur_set = json.load(f)
         for val in cur_set:
             set_data.append(val)
+
+with open(LOR_DATA_FOLDER + 'emotes/emotes.json') as f:
+    emote_data = json.load(f)

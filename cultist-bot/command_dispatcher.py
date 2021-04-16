@@ -28,6 +28,12 @@ def card(command, name_arr):
     return lor.card(name)
 
 
+def emote(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to look up the emote {name}')
+    return lor.emote(name)
+
+
 def deck(command, code):
     if len(code) != 1:
         print(f"User didn't give a valid deckcode: {code}")
@@ -81,6 +87,10 @@ commands = {
     'card': {
         'help': 'Looks up a card from Legends of Runeterra',
         'handler': card
+    },
+    'emote': {
+        'help': 'Looks up an emote',
+        'handler': emote
     },
     'deck': {
         'help': 'Shows cards from a generated deck code',
