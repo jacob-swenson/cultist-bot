@@ -15,6 +15,9 @@ LOR_VERSION = os.getenv('LOR_VERSION', '1_0_0')
 LOR_SETS = int(os.getenv('LOR_SETS', 2))
 REPEAT = os.getenv('REPEAT', 30)
 
+print('LOR_VERSION=' + LOR_VERSION)
+print('LOR_SETS=' + LOR_SETS)
+
 card_names = []
 set_data = []
 emote_data = []
