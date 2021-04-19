@@ -1,17 +1,19 @@
 from lor_deckcodes import LoRDeck, CardCodeAndCount
 from fuzzywuzzy import process
 from urllib import request
+from dotenv import load_dotenv
 import json
 import os
 import zipfile
 import time
 
+load_dotenv()
 LOR_DATA_FOLDER = 'data/lor/'
 LOR_BASE_URL = 'https://dd.b.pvp.net'
 LOR_LOCALIZATION = 'en_us'
-LOR_VERSION = os.getenv('LOR_VERSION')
-LOR_SETS = os.getenv('LOR_SETS')
-REPEAT = os.getenv('REPEAT')
+LOR_VERSION = os.getenv('LOR_VERSION', '1_0_0')
+LOR_SETS = int(os.getenv('LOR_SETS', 2))
+REPEAT = os.getenv('REPEAT', 30)
 
 card_names = []
 set_data = []
