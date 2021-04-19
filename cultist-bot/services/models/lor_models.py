@@ -9,9 +9,9 @@ import time
 LOR_DATA_FOLDER = 'data/lor/'
 LOR_BASE_URL = 'https://dd.b.pvp.net'
 LOR_LOCALIZATION = 'en_us'
-LOR_VERSION = '2_5_0'
-LOR_SETS = 4
-REPEAT = 30
+LOR_VERSION = os.getenv('LOR_VERSION')
+LOR_SETS = os.getenv('LOR_SETS')
+REPEAT = os.getenv('REPEAT')
 
 card_names = []
 set_data = []
