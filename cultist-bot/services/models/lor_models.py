@@ -16,7 +16,7 @@ LOR_SETS = int(os.getenv('LOR_SETS', 2))
 REPEAT = os.getenv('REPEAT', 30)
 
 print('LOR_VERSION=' + LOR_VERSION)
-print('LOR_SETS=' + LOR_SETS)
+print('LOR_SETS=' + str(LOR_SETS))
 
 card_names = []
 set_data = []
