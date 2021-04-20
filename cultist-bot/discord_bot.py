@@ -12,7 +12,7 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
-    print(f'{client.user} is connected to the following guild:')
+    print(f'{client.user} is connected to the following guilds:')
     for guild in client.guilds:
         print(f'\n{guild.name}(id: {guild.id})')
         members = '\n - '.join([member.name for member in guild.members])
@@ -32,17 +32,6 @@ async def on_message(message):
         args = words[1:]
         print(f"Handling command: {command} with args: {args}")
         response = command_dispatcher.dispatch(command, args)
-    # elif str(message.channel.type) == "private":
-    #     content = remove_mentions(message)
-    #     print(f"Handling private message: {content}")
-    #     response = ghoul_dispatcher.dispatch(content, str(message.author.id))
-    # else:
-    #     for mention in message.mentions:
-    #         if mention.id == client.user.id:
-    #             content = remove_mentions(message)
-    #             print(f"Handling mention: {content}")
-    #             response = ghoul_dispatcher.dispatch(content, str(message.author.id))
-    #             break
     if response is not None:
         print(f"Responding with: {response}")
         if '\n\n\n' in response:
