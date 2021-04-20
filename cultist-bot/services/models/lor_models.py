@@ -22,6 +22,7 @@ card_names = []
 set_data = []
 emote_data = []
 emote_names = []
+possible_entries = []
 
 
 class Deck:
@@ -62,7 +63,7 @@ def get_card_data_by_name(card):
 
 def get_emote_by_name(emote):
     for element in emote_data:
-        if element["name"].lower() == emote.lower():
+        if element["name"].lower() == emote.lower() or element["keyword"].lower() == emote.lower():
             return element
     return None
 
@@ -80,9 +81,13 @@ def get_emote_by_fuzzy_search(emote):
     if len(emote_names) == 0:
         for element in emote_data:
             emote_names.append(element["name"])
+    if len(possible_entries) == 0:
+        for name in emote_names:
+            possible_entries.append(name)
+            possible_entries.append(get_emote_by_name(name)["keyword"])
     if len(emote) == 0:
         return None
-    best_guess = process.extractOne(emote, emote_names)
+    best_guess = process.extractOne(emote, possible_entries)
     print(f"Fuzzy Wuzzy is {best_guess[1]}% sure the user is looking for {best_guess[0]}")
     return get_emote_by_name(best_guess[0])
 
@@ -90,10 +95,10 @@ def get_emote_by_fuzzy_search(emote):
 def get_emote_names():
     if len(emote_names) == 0:
         for element in emote_data:
-            emote_names.append(element["name"])
+            emote_names.append([element["name"]])
     result = 'Emotes I know:\n'
     for name in emote_names:
-        result += f'{name}\n'
+        result += f'{name} - {get_emote_by_name(name)["keyword"]}\n'
     return result
 
 
