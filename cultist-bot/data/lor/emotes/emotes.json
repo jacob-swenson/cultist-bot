@@ -1,13 +1,43 @@
 [
   {
+    "name": "azir",
+    "keyword": "salty",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/azir_salty.gif?raw=true"
+  },
+  {
     "name": "braum",
     "keyword": "greeting",
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/braum_greeting_tx.gif?raw=true"
   },
   {
-    "name": "darius",
+    "name": "cat",
+    "keyword": "wasn't me",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/cat_wasn't_me.gif?raw=true"
+  },
+  {
+    "name": "cythria",
+    "keyword": "yikes",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/cythria_yikes.gif?raw=true"
+  },
+  {
+    "name": "darius mistake",
     "keyword": "mistake",
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/darius_mistake_tx.gif?raw=true"
+  },
+  {
+    "name": "darius seeing red",
+    "keyword": "seeing red",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/darius_seeing_red.gif?raw=true"
+  },
+  {
+    "name": "diana",
+    "keyword": "phew",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/diana_phew.gif?raw=true"
+  },
+  {
+    "name": "dog",
+    "keyword": "what",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/dog_what.gif?raw=true"
   },
   {
     "name": "draven",
@@ -25,9 +55,19 @@
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/ezreal_sweating_TX.gif?raw=true"
   },
   {
-    "name": "fiora",
+    "name": "fiora bring it",
     "keyword": "bring it",
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/fiora_bring_it_tx.gif?raw=true"
+  },
+  {
+    "name": "fiora not amused",
+    "keyword": "not amused",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/fiora_not_amused.gif?raw=true"
+  },
+  {
+    "name": "fizz",
+    "keyword": "can't touch this",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/fizz_cant_touch_this.gif?raw=true"
   },
   {
     "name": "gangplank",
