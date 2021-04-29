@@ -6,6 +6,7 @@ import json
 import os
 import zipfile
 import time
+import shutil
 
 load_dotenv()
 LOR_DATA_FOLDER = 'data/lor/'
@@ -14,6 +15,7 @@ LOR_LOCALIZATION = 'en_us'
 LOR_VERSION = os.getenv('LOR_VERSION', '1_0_0')
 LOR_SETS = int(os.getenv('LOR_SETS', 2))
 REPEAT = os.getenv('REPEAT', 30)
+ALWAYS_DOWNLOAD = os.getenv('ALWAYS_DOWNLOAD') == "True"
 
 print('LOR_VERSION=' + LOR_VERSION)
 print('LOR_SETS=' + str(LOR_SETS))
@@ -145,6 +147,8 @@ def sets_downloaded(version, sets):
         return False
     if not os.path.isdir(LOR_DATA_FOLDER + LOR_VERSION):
         return False
+    if ALWAYS_DOWNLOAD:
+        shutil.rmtree(LOR_DATA_FOLDER + LOR_VERSION)
     for num in range(1, sets + 1):
         if not os.path.isfile(LOR_DATA_FOLDER + version + '/' + LOR_LOCALIZATION + '/data/set' + str(num) + '-' +
                               LOR_LOCALIZATION + '.json'):

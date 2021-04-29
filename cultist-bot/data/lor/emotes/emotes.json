@@ -15,13 +15,18 @@
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/cat_wasn't_me.gif?raw=true"
   },
   {
+    "name": "corina",
+    "keyword": "swoon",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/corina_swoon.gif?raw=true"
+  },
+  {
     "name": "cythria",
     "keyword": "yikes",
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/cythria_yikes.gif?raw=true"
   },
   {
-    "name": "darius mistake",
-    "keyword": "mistake",
+    "name": "darius face palm",
+    "keyword": "face palm",
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/darius_mistake_tx.gif?raw=true"
   },
   {
@@ -75,6 +80,11 @@
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/gangplank_boared_tx.gif?raw=true"
   },
   {
+    "name": "garen",
+    "keyword": "piece of cake",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/garen_piece_of_cake.gif?raw=true"
+  },
+  {
     "name": "heimerdinger",
     "keyword": "smart",
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/heimerdinger_math_tx.gif?raw=true"
@@ -85,14 +95,39 @@
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/jinx_surprise_tx.gif?raw=true"
   },
   {
+    "name": "leona",
+    "keyword": "yay",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/leona_piece_of_cake.gif?raw=true"
+  },
+  {
+    "name": "lulu",
+    "keyword": "juicy",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/lulu_juicy.gif?raw=true"
+  },
+  {
     "name": "lux",
     "keyword": "praise",
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/lux_praise_tx.gif?raw=true"
   },
   {
+    "name": "minions",
+    "keyword": "you jelly",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/minions_you_jelly.gif?raw=true"
+  },
+  {
     "name": "missfortune",
     "keyword": "confident",
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/missfortune_confident_tx.gif?raw=true"
+  },
+  {
+    "name": "nasus",
+    "keyword": "cackle",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/nasus_cackle.gif?raw=true"
+  },
+  {
+    "name": "nocturne",
+    "keyword": "obliteration",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/nocturene_obliteration.gif?raw=true"
   },
   {
     "name": "poro_pride",
@@ -115,9 +150,29 @@
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/quinn_skeptical_tx.gif?raw=true"
   },
   {
+    "name": "renekton",
+    "keyword": "deflated",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/renekton_deflated.gif?raw=true"
+  },
+  {
+    "name": "riven",
+    "keyword": "no mercy",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/riven_no_mercy.gif?raw=true"
+  },
+  {
     "name": "shen",
     "keyword": "respect",
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/shen_respect_tx.gif?raw=true"
+  },
+  {
+    "name": "shyvana",
+    "keyword": "yuss",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/shyvana_yuss.gif?raw=true"
+  },
+  {
+    "name": "soraka",
+    "keyword": "whyyy",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/soraka_whyyy.gif?raw=true"
   },
   {
     "name": "swain",
@@ -125,7 +180,22 @@
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/swain_mindblown_tx.gif?raw=true"
   },
   {
-    "name": "teemo",
+    "name": "tahm kench",
+    "keyword": "much obliged",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/tahm_kench_much_obliged.gif?raw=true"
+  },
+  {
+    "name": "taric",
+    "keyword": "smart",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/taric_smart.gif?raw=true"
+  },
+  {
+    "name": "teemo tongue",
+    "keyword": "teasing",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/teemo_teasing.gif?raw=true"
+  },
+  {
+    "name": "teemo topdeck",
     "keyword": "topdeck",
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/teemo_topdeck_TX.gif?raw=true"
   },
@@ -140,13 +210,38 @@
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/tryndamere_rage_tx.gif?raw=true"
   },
   {
+    "name": "urf",
+    "keyword": "big flex",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/urf_big_flex.gif?raw=true"
+  },
+  {
+    "name": "vi",
+    "keyword": "over it",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/vi_over_it.gif?raw=true"
+  },
+  {
+    "name": "viktor",
+    "keyword": "how dare you",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/viktor_how_dare_you.gif?raw=true"
+  },
+  {
     "name": "vlad",
     "keyword": "cheers",
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/vlad_cheers_tx.gif?raw=true"
   },
   {
+    "name": "xayah",
+    "keyword": "wait what",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/xayah_wait_what.gif?raw=true"
+  },
+  {
     "name": "yasuo",
     "keyword": "nope",
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/yasuo_reversal_tx.gif?raw=true"
+  },
+  {
+    "name": "yone",
+    "keyword": "wink",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/yone_wink.gif?raw=true"
   }
 ]
