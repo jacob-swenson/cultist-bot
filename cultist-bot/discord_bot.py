@@ -2,6 +2,7 @@ import os
 import discord
 import command_dispatcher
 from dotenv import load_dotenv
+from time import sleep
 
 
 load_dotenv()
@@ -24,8 +25,12 @@ async def on_message(message):
     if message.author == client.user:
         return
     response = None
+    pause = 0
     if "TROLL" in message.content.upper():
         response = "http://dd.b.pvp.net/2_5_0/set3/en_us/img/cards/03FR002.png"
+    if "NINJA" in message.content.upper():
+        pause = 2
+        response = "left\n\n\nand right\n\n\nand kick it to the side\n\n\nwe're going round\n\n\nand round\n\n\nand down to the ground\n\n\ngo\n\n\nyou got it\n\n\ngo go you got it"
     if len(message.content) > 0 and message.content[0] == '!':
         words = message.content.split()
         command = words[0][1:]
@@ -38,6 +43,7 @@ async def on_message(message):
             responses = response.split('\n\n\n')
             for resp in responses:
                 await message.channel.send(resp)
+                sleep(pause)
         else:
             await message.channel.send(response)
 
