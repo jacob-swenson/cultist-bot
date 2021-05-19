@@ -31,6 +31,8 @@ async def on_message(message):
     if "NINJA" in message.content.upper():
         pause = 2
         response = "left\n\n\nand right\n\n\nand kick it to the side\n\n\nwe're going round\n\n\nand round\n\n\nand down to the ground\n\n\ngo\n\n\nyou got it\n\n\ngo go you got it"
+    if "TEEMO" in message.content.upper():
+        response = "What the **** is that?!"
     if len(message.content) > 0 and message.content[0] == '!':
         words = message.content.split()
         command = words[0][1:]
