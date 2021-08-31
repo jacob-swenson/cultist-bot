@@ -21,12 +21,13 @@ setup(
         'wit',
         'discord',
         'python-dotenv',
-        'lor-deckcodes>=3.0.0',
+        'lor-deckcodes>=4.0.0',
         'slackclient>=2.0.0',
         'slackeventsapi>=2.1.0',
         'Flask>=1.1.1',
         'certifi',
         'fuzzywuzzy',
-        'python-Levenshtein'
+        'python-Levenshtein',
+        'requests'
     ],
 )

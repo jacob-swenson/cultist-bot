@@ -90,6 +90,11 @@
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/heimerdinger_math_tx.gif?raw=true"
   },
   {
+    "name": "irelia",
+    "keyword": "try to keep up",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/irelia_try_to_keep_up.gif?raw=true"
+  },
+  {
     "name": "jinx",
     "keyword": "surprise",
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/jinx_surprise_tx.gif?raw=true"
@@ -243,5 +248,10 @@
     "name": "yone",
     "keyword": "wink",
     "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/yone_wink.gif?raw=true"
+  },
+  {
+    "name": "zilean",
+    "keyword": "back away slowly",
+    "url": "https://github.com/jacob-swenson/cultist-bot/blob/master/cultist-bot/data/lor/emotes/zilean_back_away_slowly.gif?raw=true"
   }
 ]

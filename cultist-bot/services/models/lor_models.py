@@ -1,7 +1,7 @@
 from lor_deckcodes import LoRDeck, CardCodeAndCount
 from fuzzywuzzy import process
-from urllib import request
 from dotenv import load_dotenv
+import requests
 import json
 import os
 import zipfile
@@ -126,7 +126,9 @@ def download_sets(version, sets):
         repeat = True
         while repeat:
             try:
-                request.urlretrieve(url, zip_filename)
+                req = requests.get(url)
+                with open(zip_filename,'wb') as output_file:
+                    output_file.write(req.content)
                 repeat = False
             except Exception as e:
                 print("Download failed!")
