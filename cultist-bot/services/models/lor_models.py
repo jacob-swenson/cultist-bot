@@ -38,13 +38,16 @@ class Deck:
             card = CardCodeAndCount.from_card_string(cardcode)
             for card_data in set_data:
                 if card_data["cardCode"] == cardcode[2:]:
+                    card_region = ""
                     if card_data["rarity"] == "Champion":
                         self.champions.append(card_data["name"])
-                    if card_data["region"] not in self.regions:
-                        self.regions.append(card_data["region"])
-                        self.cards_by_region[card_data["region"]] = []
+                    for region in card_data["regions"]:
+                        card_region += region + " "
+                        if region not in self.regions:
+                            self.regions.append(region)
+                            self.cards_by_region[region] = []
                     cards.append(Card(card.count, card_data))
-                    self.cards_by_region[card_data["region"]].append(Card(card.count, card_data))
+                    self.cards_by_region[card_data["regions"][0]].append(Card(card.count, card_data))
         self.cards = sorted(cards, key=lambda x: x.data["cost"])
         for k, v in self.cards_by_region.items():
             self.cards_by_region[k] = sorted(v, key=lambda x: x.data["cost"])
