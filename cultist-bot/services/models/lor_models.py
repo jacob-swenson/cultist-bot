@@ -34,6 +34,7 @@ class Deck:
         self.champions = []
         self.regions = []
         self.cards_by_region = {}
+        self.cards_by_type = {"Champions": [], "Followers": [], "Spells": [], "Landmarks": []}
         for cardcode in deck:
             card = CardCodeAndCount.from_card_string(cardcode)
             for card_data in set_data:
@@ -41,6 +42,13 @@ class Deck:
                     card_region = ""
                     if card_data["rarity"] == "Champion":
                         self.champions.append(card_data["name"])
+                        self.cards_by_type["Champions"].append(Card(card.count, card_data))
+                    elif card_data["type"] == "Unit":
+                        self.cards_by_type["Followers"].append(Card(card.count, card_data))
+                    elif card_data["type"] == "Spell":
+                        self.cards_by_type["Spells"].append(Card(card.count, card_data))
+                    else:
+                        self.cards_by_type["Landmarks"].append(Card(card.count, card_data))
                     for region in card_data["regions"]:
                         card_region += region + " "
                         if region not in self.regions:
@@ -51,6 +59,8 @@ class Deck:
         self.cards = sorted(cards, key=lambda x: x.data["cost"])
         for k, v in self.cards_by_region.items():
             self.cards_by_region[k] = sorted(v, key=lambda x: x.data["cost"])
+        for k, v in self.cards_by_type.items():
+            self.cards_by_type[k] = sorted(v, key=lambda x: x.data["cost"])
 
 
 class Card:

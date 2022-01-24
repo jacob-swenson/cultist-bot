@@ -14,11 +14,19 @@ def deck_code(code):
             response += " / "
         response += champion
         first = False
+    response += "\n\n"
+    first = True
+    for region in deck.regions:
+        if not first:
+            response += " / "
+        response += region
+        first = False
     response += "\n"
-    for region, cards in deck.cards_by_region.items():
-        response += "\n" + region + "\n-----------\n"
-        for card in cards:
-            response += "\t" + str(card.count) + ": " + card.data["name"] + "\n"
+    for card_type, cards in deck.cards_by_type.items():
+        if len(cards) > 0:
+            response += "\n" + card_type + "\n-----------\n"
+            for card in cards:
+                response += "\t" + str(card.count) + ": (" + str(card.data["cost"]) + ") " + card.data["name"] + "\n"
     response += "```"
     return response
 
