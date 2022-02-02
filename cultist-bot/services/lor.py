@@ -28,6 +28,8 @@ def deck_code(code):
             for card in cards:
                 response += "\t" + str(card.count) + ": (" + str(card.data["cost"]) + ") " + card.data["name"] + "\n"
     response += "```"
+    response += "\n\n\n"
+    response += "<https://runeterra.ar/decks/code/" + code + ">"
     return response
 
 
