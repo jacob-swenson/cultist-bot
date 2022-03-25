@@ -1,4 +1,4 @@
-from services import cthulhuwars, base_service, lor
+from services import cthulhuwars, base_service, lor, elden_ring
 
 
 def get_handler(command: str):
@@ -40,6 +40,24 @@ def deck(command, code):
         return "Your input doesn't look correct. Please use format: " \
                "\n!deck CEBQCAQFAEAQCAJCBAAQKEA2DUUCWMJSGUBAEAQFAQFAEAIFDE4ACAQBAURS2"
     return lor.deck_code(code[0])
+
+
+def weapon(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to look up the weapon {name}')
+    return elden_ring.weapon(name)
+
+
+def item(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to look up the item {name}')
+    return elden_ring.item(name)
+
+
+def shield(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to look up the shield {name}')
+    return elden_ring.shield(name)
 
 
 def base_command(command, args):
@@ -93,6 +111,18 @@ commands = {
     'deck': {
         'help': 'Shows cards from a generated deck code',
         'handler': deck
+    },
+    'weapon': {
+        'help': 'Looks up an Elden Ring Weapon',
+        'handler': weapon
+    },
+    'item': {
+        'help': 'Looks up an Elden Ring Item',
+        'handler': item
+    },
+    'shield': {
+        'help': 'Looks up an Elden Ring Shield',
+        'handler': shield
     },
     'help': {
         'help': 'Displays this message',
