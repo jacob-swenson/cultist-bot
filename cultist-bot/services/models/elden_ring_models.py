@@ -16,7 +16,7 @@ elden_ring_data = {}
 
 
 def data_downloaded():
-    if FORCE_DOWNLOAD_ELDEN_RING:
+    if FORCE_DOWNLOAD_ELDEN_RING and os.path.exists(ELDEN_RING_DATA_PATH):
         shutil.rmtree(ELDEN_RING_DATA_PATH)
     if not os.path.exists(ELDEN_RING_DATA_PATH):
         return False
@@ -46,7 +46,8 @@ def download_all_data():
         'weapons': download_data('weapons', 0, []),
         'items': download_data('items', 0, []),
         'shields': download_data('shields', 0, []),
-        'ashes': download_data('ashes', 0, [])
+        'ashes': download_data('ashes', 0, []),
+        'bosses': download_data('bosses', 0, [])
     }
     if not os.path.exists(ELDEN_RING_DATA_PATH):
         os.mkdir(ELDEN_RING_DATA_PATH)
@@ -73,11 +74,15 @@ def load_data():
         ashes = {}
         for ash in in_data['ashes']:
             ashes[ash['name']] = ash
+        bosses = {}
+        for boss in in_data['bosses']:
+            bosses[boss['name']] = boss
         elden_ring_data = {
             'weapons': weapons,
             'items': items,
             'shields': shields,
-            'ashes': ashes
+            'ashes': ashes,
+            'bosses': bosses
         }
 
 

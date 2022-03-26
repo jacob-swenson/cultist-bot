@@ -76,3 +76,17 @@ def ashes(name):
     response += "Description:\n```" + data["description"] + "```\n"
     return response
 
+
+def boss(name):
+    print("Getting Boss " + name)
+    data = elden_ring_models.get_data('bosses', name)
+    response = data["image"] + "\n\n\n"
+    response += "Name: " + data["name"] + "\n"
+    response += "Location: " + data["location"] + "\n"
+    response += "Description:\n```" + data["description"] + "```\n"
+    response += "Drops:\n```"
+    for drop in data["drops"]:
+        response += drop + "\n"
+    response += "```\n"
+    return response
+

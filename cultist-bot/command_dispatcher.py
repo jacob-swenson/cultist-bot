@@ -63,7 +63,13 @@ def shield(command, name_arr):
 def ashes(command, name_arr):
     name = ' '.join(name_arr)
     print(f'User wants to look up the ashes {name}')
-    return elden_ring.shield(name)
+    return elden_ring.ashes(name)
+
+
+def boss(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to look up the boss {name}')
+    return elden_ring.boss(name)
 
 
 def base_command(command, args):
@@ -133,6 +139,10 @@ commands = {
     'shield': {
         'help': 'Looks up an Elden Ring Shield',
         'handler': shield
+    },
+    'boss': {
+        'help': 'Looks up and Elden Ring Boss',
+        'handler': boss
     },
     'help': {
         'help': 'Displays this message',
