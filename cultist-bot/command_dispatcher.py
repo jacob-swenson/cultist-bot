@@ -60,6 +60,12 @@ def shield(command, name_arr):
     return elden_ring.shield(name)
 
 
+def ashes(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to look up the ashes {name}')
+    return elden_ring.shield(name)
+
+
 def base_command(command, args):
     print('Handling base command')
     return base_service.respond_to(command)
@@ -115,6 +121,10 @@ commands = {
     'weapon': {
         'help': 'Looks up an Elden Ring Weapon',
         'handler': weapon
+    },
+    'ashes': {
+        'help': 'Looks up an Ashes of War in Elend Ring',
+        'handler': ashes
     },
     'item': {
         'help': 'Looks up an Elden Ring Item',

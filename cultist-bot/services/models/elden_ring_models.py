@@ -45,7 +45,8 @@ def download_all_data():
     data = {
         'weapons': download_data('weapons', 0, []),
         'items': download_data('items', 0, []),
-        'shields': download_data('shields', 0, [])
+        'shields': download_data('shields', 0, []),
+        'ashes': download_data('ashes', 0, [])
     }
     if not os.path.exists(ELDEN_RING_DATA_PATH):
         os.mkdir(ELDEN_RING_DATA_PATH)
@@ -69,10 +70,14 @@ def load_data():
         shields = {}
         for shield in in_data['shields']:
             shields[shield['name']] = shield
+        ashes = {}
+        for ash in in_data['ashes']:
+            ashes[ash['name']] = ash
         elden_ring_data = {
             'weapons': weapons,
             'items': items,
-            'shields': shields
+            'shields': shields,
+            'ashes': ashes
         }
 
 

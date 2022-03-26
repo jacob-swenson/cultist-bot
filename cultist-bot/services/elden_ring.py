@@ -65,3 +65,14 @@ def shield(name):
     response += "```\n"
     return response
 
+
+def ashes(name):
+    print("Getting Ashes " + name)
+    data = elden_ring_models.get_data('ashes', name)
+    response = data["image"] + "\n\n\n"
+    response += "Name: " + data["name"] + "\n"
+    response += "Affinity: " + data["affinity"] + "\n"
+    response += "Skill: " + data["skill"] + "\n"
+    response += "Description:\n```" + data["description"] + "```\n"
+    return response
+
