@@ -72,6 +72,66 @@ def boss(command, name_arr):
     return elden_ring.boss(name)
 
 
+def npc(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to look up the NPC {name}')
+    return elden_ring.npc(name)
+
+
+def location(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to look up the Location {name}')
+    return elden_ring.location(name)
+
+
+def spirit(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to look up the Spirit {name}')
+    return elden_ring.spirit(name)
+
+
+def talisman(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to look up the Talisman {name}')
+    return elden_ring.talisman(name)
+
+
+def armor(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to look up the Armor {name}')
+    return elden_ring.armor(name)
+
+
+def creature(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to look up the Creature {name}')
+    return elden_ring.creature(name)
+
+
+def incantation(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to look up the Incantation {name}')
+    return elden_ring.incantation(name)
+
+
+def sorcery(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to look up the Sorcery {name}')
+    return elden_ring.sorcery(name)
+
+
+def ammo(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to look up the Ammo {name}')
+    return elden_ring.ammo(name)
+
+
+def classes(command, name_arr):
+    name = ' '.join(name_arr)
+    print(f'User wants to look up the Class {name}')
+    return elden_ring.classes(name)
+
+
 def base_command(command, args):
     print('Handling base command')
     return base_service.respond_to(command)
@@ -141,8 +201,48 @@ commands = {
         'handler': shield
     },
     'boss': {
-        'help': 'Looks up and Elden Ring Boss',
+        'help': 'Looks up an Elden Ring Boss',
         'handler': boss
+    },
+    'npc': {
+        'help': 'Looks up an Elden Ring NPC',
+        'handler': npc
+    },
+    'location': {
+        'help': 'Looks up an Elden Ring Location',
+        'handler': location
+    },
+    'spirit': {
+        'help': 'Looks up an Elden Ring Spirit',
+        'handler': spirit
+    },
+    'talisman': {
+        'help': 'Looks up an Elden Ring Talisman',
+        'handler': talisman
+    },
+    'armor': {
+        'help': 'Looks up an Elden Ring Armor',
+        'handler': armor
+    },
+    'creature': {
+        'help': 'Look up an Elden Ring Creature',
+        'handler': creature
+    },
+    'incantation': {
+        'help': 'Look up an Elden Ring Incantation',
+        'handler': incantation
+    },
+    'sorcery': {
+        'help': 'Look up an Elden Ring Sorcery',
+        'handler': sorcery
+    },
+    'ammo': {
+        'help': 'Look up an Elden Ring Ammo',
+        'handler': ammo
+    },
+    'class': {
+        'help': 'Look up an Elden Ring Class',
+        'handler': classes
     },
     'help': {
         'help': 'Displays this message',
